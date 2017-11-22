@@ -155,7 +155,7 @@ log::info() {
         log::toFile INFO "$content" || return $?
 
         if [[ -z "${LOG_QUIET-}" ]]; then
-            string::prefixLInes output "INFO: " "$content" || return $?
+            string::prefixLines output "INFO: " "$content" || return $?
 
             if [[ -n "${LOG_COLOR-}" ]]; then
                 output=$'\E[32m'"$output"$'\E[0m'
